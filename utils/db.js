@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
 
 // Replace 'YOUR_MONGODB_URI' with your actual MongoDB connection URI
-const mongodbURI = "mongodb://127.0.0.1:27017/sampleTemplate";
+const mongodbURI =
+  process.env.mongodbURI || "mongodb://127.0.0.1:27017/sampleTemplate";
 
 // Connect to MongoDB
 const connectDB = async () => {
